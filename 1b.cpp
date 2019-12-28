@@ -18,5 +18,5 @@ int calculateTotalFuel(int mass)
 int main()
 {
     std::ifstream input{"input/1.txt"};
-    std::cout << accumulate(istream_range<int>(input) | view::transform(calculateTotalFuel), 0) << '\n';
+    std::cout << accumulate(istream_view<int>(input) | view::transform(calculateTotalFuel), 0) << '\n';
 }
